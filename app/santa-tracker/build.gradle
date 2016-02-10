@@ -48,7 +48,7 @@ android {
         }
     }
     lintOptions {
-        disable 'NewApi'
+        disable 'NewApi', 'MissingTranslation', 'ExtraTranslation'
     }
 }
 
