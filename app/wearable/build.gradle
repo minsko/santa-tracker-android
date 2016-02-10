@@ -49,13 +49,13 @@ android {
         }
 
         dogfood {
-            minifyEnabled true
-            proguardFile 'proguard-wear.txt'
+            //minifyEnabled true
+            //proguardFile 'proguard-wear.txt'
             // signingConfig signingConfigs.dogfood
         }
         release {
-            minifyEnabled true
-            proguardFile 'proguard-wear.txt'
+            //minifyEnabled true
+            //proguardFile 'proguard-wear.txt'
         }
     }
 

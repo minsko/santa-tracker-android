@@ -47,14 +47,14 @@ android {
         }
 
         dogfood {
-            minifyEnabled true
-            proguardFile 'proguard.txt'
+            //minifyEnabled true
+            //proguardFile 'proguard.txt'
             // signingConfig signingConfigs.dogfood
         }
 
         release {
-            minifyEnabled true
-            proguardFile 'proguard.txt'
+            //minifyEnabled true
+            //proguardFile 'proguard.txt'
         }
     }
     lintOptions {
