@@ -30,32 +30,22 @@ android {
 
 
     signingConfigs {
-        debug {
-//            storeFile file("../santa-tracker-debug.keystore")
-//            keyAlias "androiddebugkey"
-        }
-        dogfood {
-//            storeFile file("../santa-tracker-dogfood.keystore")
-//            storePassword ""
-//            keyAlias "releasekey"
-//            keyPassword ""
+        standard {
+            storeFile file("../myKeystore.keystore")
+            storePassword "password"
+            keyAlias "santa_wear_app"
+            keyPassword "password"
         }
     }
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
-            signingConfig signingConfigs.debug
-        }
-
-        dogfood {
-            //minifyEnabled true
-            //proguardFile 'proguard-wear.txt'
-            // signingConfig signingConfigs.dogfood
         }
         release {
             //minifyEnabled true
             //proguardFile 'proguard-wear.txt'
+            signingConfig signingConfigs.standard
         }
     }
 

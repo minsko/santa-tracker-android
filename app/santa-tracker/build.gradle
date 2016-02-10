@@ -28,33 +28,23 @@ android {
         versionName "2.1.2"
     }
     signingConfigs {
-        debug {
-//            storeFile file("../santa-tracker-debug.keystore")
-//            keyAlias "androiddebugkey"
-        }
-        dogfood {
-//            storeFile file("../santa-tracker-dogfood.keystore")
-//            storePassword ""
-//            keyAlias "releasekey"
-//            keyPassword ""
+        standard {
+            storeFile file("../myKeystore.keystore")
+            storePassword "password"
+            keyAlias "santa_app"
+            keyPassword "password"
         }
     }
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
-            signingConfig signingConfigs.debug
-        }
-
-        dogfood {
-            //minifyEnabled true
-            //proguardFile 'proguard.txt'
-            // signingConfig signingConfigs.dogfood
         }
 
         release {
             //minifyEnabled true
             //proguardFile 'proguard.txt'
+            signingConfig signingConfigs.standard
         }
     }
     lintOptions {
