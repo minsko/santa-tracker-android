@@ -17,13 +17,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion toolsVersion
 
     defaultConfig {
         applicationId "com.google.android.apps.santatracker"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 23
         versionCode 32
         versionName "2.1.2"
     }
@@ -43,6 +43,7 @@ android {
 
         release {
             //minifyEnabled true
+            shrinkResources true
             //proguardFile 'proguard.txt'
             signingConfig signingConfigs.standard
         }
